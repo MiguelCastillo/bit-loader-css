@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/MiguelCastillo/bit-bundler-css",
   "dependencies": {
-    "belty": "^0.3.0",
-    "bit-bundler-utils": "^1.0.1"
+    "bit-plugin-builder": "^1.0.0"
   }
 }
