@@ -1,25 +1,26 @@
 {
-  "name": "bit-bundler-css",
+  "name": "bit-loader-css",
   "version": "0.0.0",
-  "description": "Bit bundler plugin for bundling css assets",
+  "description": "bit-loader plugin for CSS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "bit-bundler",
-    "bit-bundler-loader-plugin"
+    "bit-loader",
+    "bit-loader-plugin"
   ],
   "author": "Miguel Castillo <manchagnu@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MiguelCastillo/bit-bundler-css.git"
+    "url": "https://github.com/MiguelCastillo/bit-loader-css.git"
   },
   "bugs": {
-    "url": "https://github.com/MiguelCastillo/bit-bundler-css/issues"
+    "url": "https://github.com/MiguelCastillo/bit-loader-css/issues"
   },
-  "homepage": "https://github.com/MiguelCastillo/bit-bundler-css",
+  "homepage": "https://github.com/MiguelCastillo/bit-loader-css",
   "dependencies": {
     "bit-plugin-builder": "^1.0.0"
   }
