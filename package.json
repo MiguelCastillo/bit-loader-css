@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/MiguelCastillo/bit-loader-css",
   "dependencies": {
-    "bit-plugin-builder": "^1.0.0"
+    "bit-plugin-builder": "^1.1.0"
   }
 }
