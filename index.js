@@ -6,9 +6,7 @@ var PluginBuilder = require("bit-plugin-builder");
 var loadStyleName = __dirname + "/loadstyle.js";
 
 var defaults = {
-  match: {
-    path: /[\w]+\.(css)$/
-  },
+  extensions: ["css"],
   dependency: function cssDependency(meta) {
     return {
       deps: [loadStyleName],
