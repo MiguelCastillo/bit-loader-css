@@ -4,7 +4,7 @@
   "description": "bit-loader plugin for CSS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint index.js loadstyle.js"
   },
   "keywords": [
     "bit-bundler",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/MiguelCastillo/bit-loader-css",
   "dependencies": {
     "bit-plugin-builder": "^1.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.2.2"
   }
 }
