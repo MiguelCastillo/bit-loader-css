@@ -1,21 +1,33 @@
 # bit-loader-css
 > bit-loader plugin for CSS
 
-The output of this plugin factory is a configuration Object that can be used as a [bit-loader](https://github.com/MiguelCastillo/bit-loader) plugin.
 
-### Example
+## Usage
 
-#### Simple plugin configuration with SASS transform
+### install
 
-``` javascript
-  var cssPlugin = require("bit-loader-css");
-  var sassybits = require("sassy-bits");
-
-  var pluginConfig = cssPlugin({
-    transform: sassybits.configure({ load: false })
-  });
+```
+$ npm install bit-loader-css --save
 ```
 
-### License
+### Bitbundler plugin configuration with SASS transform
+
+``` javascript
+var Bitbundler = require("bit-bundler");
+var cssPlugin  = require("bit-loader-css");
+var sassybits  = require("sassy-bits");
+
+var bitbundler = new Bitbundler({
+  loader: {
+    plugins: [
+      cssPlugin({
+        transform: sassybits.configure({ load: false })
+      })
+    ]
+  }
+});
+```
+
+## License
 
 Licensed under MIT
