@@ -1,5 +1,3 @@
-var PluginBuilder = require("bit-plugin-builder");
-
 // For now we will use the full path as the name while this
 // issue is resolved:
 // https://github.com/MiguelCastillo/bit-loader/issues/187
@@ -15,11 +13,14 @@ var defaults = {
   }
 };
 
-function cssPlugin(options) {
-  return PluginBuilder
-    .create(defaults)
-    .configure(options)
-    .build();
+function buildPlugin(options, builder) {
+  return builder
+    .configure(defaults)
+    .configure(options);
 }
 
-module.exports = cssPlugin;
+module.exports = function factory(options) {
+  return function(builder) {
+    return buildPlugin(options, builder);
+  };
+};
