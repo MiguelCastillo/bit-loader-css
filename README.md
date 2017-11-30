@@ -1,4 +1,6 @@
 # bit-loader-css
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/MiguelCastillo/bit-loader-css.svg)](https://greenkeeper.io/)
 > bit-loader plugin for CSS
 
 
