@@ -1,12 +1,24 @@
-var loadStyleName = "bit-loader-css/loadstyle.js";
+const loadStylePath = require.resolve("bit-loader-css/loadstyle.js");
+const loadStyleName = "$bit-loader-css/loadstyle";
 
 var defaults = {
-  extensions: ["css"],
+  match: {
+    extensions: ["css"],
+    name: loadStyleName
+  },
+  resolve: function(meta) {
+    if (meta.name === loadStyleName) {
+      return {
+        path: loadStylePath
+      };
+    }
+  },
   dependency: function cssDependency(meta) {
-    return {
-      deps: [loadStyleName],
-      source: "require('" + loadStyleName + "')(" + JSON.stringify(meta.source) + ");"
-    };
+    if (meta.name !== loadStyleName) {
+      return {
+        source: "require('" + loadStyleName + "')(" + JSON.stringify(meta.source) + ");"
+      };
+    }
   }
 };
 
