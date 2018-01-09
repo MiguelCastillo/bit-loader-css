@@ -1,6 +1,6 @@
 {
   "name": "bit-loader-css",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "bit-loader plugin for CSS",
   "main": "index.js",
   "scripts": {
