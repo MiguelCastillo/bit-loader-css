@@ -1,4 +1,5 @@
-const loadStylePath = require.resolve("bit-loader-css/loadstyle.js");
+const path = require("path");
+const loadStylePath = path.join(__dirname, "loadstyle.js");
 const loadStyleName = "$bit-loader-css/loadstyle";
 
 var defaults = {
