@@ -21,7 +21,9 @@
     "url": "https://github.com/MiguelCastillo/bit-loader-css/issues"
   },
   "homepage": "https://github.com/MiguelCastillo/bit-loader-css",
-  "dependencies": {},
+  "dependencies": {
+    "combine-source-map": "^0.8.0"
+  },
   "devDependencies": {
     "eslint": "^4.12.1"
   }

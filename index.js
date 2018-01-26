@@ -1,3 +1,4 @@
+const combineSourceMap = require("combine-source-map");
 const path = require("path");
 const loadStylePath = path.join(__dirname, "loadstyle.js");
 const loadStyleName = "$bit-loader-css/loadstyle";
@@ -15,11 +16,25 @@ var defaults = {
     }
   },
   dependency: function cssDependency(meta) {
-    if (meta.name !== loadStyleName) {
-      return {
-        source: "require('" + loadStyleName + "')(" + JSON.stringify(meta.source) + ");"
-      };
+    if (meta.name === loadStyleName) {
+      return;
     }
+
+    const smString = combineSourceMap
+      .create()
+      .addFile({
+        source: meta.source,
+        sourceFile: meta.filename
+      }, {
+        line: 1
+      })
+      .comment();
+
+    const source = JSON.stringify(combineSourceMap.removeComments(meta.source));
+
+    return {
+      source: `require("${loadStyleName}")(\n${source}\n);\n${smString}\n`
+    };
   }
 };
 
