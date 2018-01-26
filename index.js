@@ -24,7 +24,7 @@ var defaults = {
       .create()
       .addFile({
         source: meta.source,
-        sourceFile: meta.filename
+        sourceFile: meta.filename || meta.path || "$anonymous.css"
       }, {
         line: 1
       })
