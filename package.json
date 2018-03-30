@@ -1,5 +1,5 @@
 {
-  "name": "bit-loader-css",
+  "name": "@bit/loader-css",
   "version": "1.1.8",
   "description": "bit-loader plugin for CSS",
   "main": "index.js",
