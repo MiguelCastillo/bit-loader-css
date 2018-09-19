@@ -9,14 +9,14 @@
 ### install
 
 ```
-$ npm install bit-loader-css --save
+$ npm install @bit/loader-css --save
 ```
 
 ### Bitbundler plugin configuration with SASS transform
 
 ``` javascript
-var Bitbundler = require("bit-bundler");
-var cssPlugin  = require("bit-loader-css");
+var Bitbundler = require("@bit/bundler");
+var cssPlugin  = require("@bit/loader-css");
 var sassybits  = require("sassy-bits");
 
 var bitbundler = new Bitbundler({
